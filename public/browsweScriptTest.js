@@ -36,6 +36,7 @@ function myFunction() {
       return `
       <div class="artical">
         <h2 class="artical-title">${pruduct.title}</h2>
+        <h2 class="artical-price">Pris: ${pruduct.price} ${pruduct.currency} </h2>
       </div>
       ` 
     }).join('')}

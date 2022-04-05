@@ -25,6 +25,7 @@ app.get('/browsweScriptTest.js', (req, res) => {
 app.get('/api', (req, res) => {
 
     var serchQuery = req.query.serchQuery
+    var responseObject = []
 
     
     for (let j = 0; j < dataObject.length; j++) {
@@ -32,13 +33,26 @@ app.get('/api', (req, res) => {
         if(dataObject[j].title.search(new RegExp(serchQuery, "i")) > -1) {
             console.log(dataObject[j].title)
             console.log(j)
+
+            const pruduct = {
+                title: dataObject[j].title,
+                description: dataObject[j].description,
+                article_number: dataObject[j].article_number,
+                price: dataObject[j].price,
+                price_campaign: dataObject[j].price_campaign,
+                currency: dataObject[j].currency,
+                in_stock: dataObject[j].in_stock,
+                category: dataObject[j].category,
+                url: dataObject[j].url
+            }
+
+            responseObject.push(pruduct)
+
         }
 
-    } 
+    }
 
-    console.log("---------------------------------------")
-
-    res.send(dataObject)
+    res.send(responseObject)
 })
 
 
