@@ -1,0 +1,40 @@
+* {
+    padding: 0
+}
+
+
+h1 {
+    text-align: center;
+    color: rgb(241, 241, 241);
+}
+
+body {
+    background-color: rgb(15, 15, 15);
+    align-items: center;
+}
+
+input {
+    background-color: rgb(65, 65, 65);
+    border-radius: 10px;
+    color: white;
+    
+}
+
+.artical-title {
+    color: rgb(27, 29, 156);
+}
+
+.artical-price {
+    color: rgb(173, 22, 22);
+}
+
+.artical {
+    background-color: rgb(255, 255, 255);
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.search-container {
+    text-align: center;
+    padding: 3em;
+}
